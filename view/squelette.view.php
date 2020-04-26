@@ -69,7 +69,7 @@ class squelette{
                       <li><a href="#">PARATENNIS</a></li>
                       <li><a href="#">TORBALL</a></li>
                       <li><a href="#">NATATION</a>
-                        <ul class="dropdown" aria-label="submenu">
+                        <ul class="dropdown2" aria-label="submenu">
                           <li><a href="#">ECOLE DE NATATION</a></li>
                           <li><a href="#">NATATION ADULTE (HANDI NATATION)</a></li>
                         </ul>

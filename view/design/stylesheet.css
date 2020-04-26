@@ -153,19 +153,13 @@ div.centre{
   width: 60%
 }
 
-div.Column{
+/* div.Column{
   border: 2px solid #362514;
   border-radius: 2px;
   padding: 20px;
   width: 20%;
   padding: 0px;
-}
-
-
-
- {
-  text-align: center;
-}
+} */
 
 
 .comment p{
@@ -386,6 +380,7 @@ i.fa{
 
 
 .navbar li {
+    z-index: 5;
     color: #fff;
     background: rgb(30,115,190);
     display: block;
@@ -469,9 +464,7 @@ h2{
   font-weight: bold;
 }
 
-li{
-  z-index: 5;
-}
+
 
 .bienvenue{
   margin: 20px;
@@ -492,4 +485,11 @@ li{
 
 form{
   display: inline-block;
+}
+
+.dropdown2 li {
+  z-index: 5;
+  position: relative;
+  left: 106.5px;
+  top: -44px;
 }
