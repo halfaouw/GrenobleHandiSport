@@ -1,0 +1,12 @@
+St Valentin|Pour fêter la St Valentin avec votre partenaire|34.7|001|1.PNG|type1
+Mi Figue mi Framboise|Tartelette aux figues et aux framboises|8.0|002|2.PNG|type2
+4 Baies|Tarte aux fraises, framboises, myrtilles et mûres |25.5|003|3.PNG|type1
+Roses Rouges|Magnifique wedding cake rouge et roses rouges comestibles|48.95|004|4.PNG|type1
+Christmas Cake|Partagez ce gâteau avec votre famille à l'occasion du réveillon|32.1|005|5.PNG|type1
+Galette des Rois|Qui aura, la fève ?|35.25|006|6.PNG|type1
+Chocolat Froid|Delicieux gâteau au chocolat au theme de l'hiver|24.0|007|7.PNG|type1
+Acid Tornado|Tartelette au citron meringué|11.5|008|8.PNG|type2
+Chocolat Caramel|Tartelette au chocolat-caramel et aux éclats d'amandes|9.5|009|9.PNG|type2
+Orange Vibes|Tartelette à l'orange|8.90|0010|10.PNG|type2
+Sanglant|Delicieux gâteau à l'orange sanguine|26.20|0011|11.PNG|type1
+Ultra Violet|Petits delices aux violettes|15.8|0012|12.PNG|type2
