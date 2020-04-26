@@ -30,6 +30,7 @@ class squelette{
       <title>Accueil - Grenoble Handisport</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="http://fonts.googleapis.com/css?family=Bitter" rel="stylesheet" type="text/css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../view/design/'.$css.'">
@@ -49,7 +50,7 @@ class squelette{
 
             <div class="navbar">
                 <ul>
-                  <li><a href="Valatria.html">ACCUEIL</a></li>
+                  <li><a href="../controler/main.ctrl.php">ACCUEIL</a></li>
                   <li><a href="#" aria-haspopup="true">LA VIE AU CLUB</a>
                     <ul class="dropdown" aria-label="submenu">
                       <li><a href="#">HISTORIQUE</a></li>

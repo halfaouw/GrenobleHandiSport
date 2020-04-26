@@ -31,6 +31,7 @@ echo "$squelette->header"; //HEAD + HEADER + BALISE BODY OUVRANTE
 if (isset($_GET['action']) ) {
   if ($_GET['action'] == 'signin') {
 
+
 echo '
 
 <form  action="" method="POST" enctype="multipart/form-data">
