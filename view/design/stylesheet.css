@@ -1,5 +1,12 @@
 
 header{
+
+  /*A SUPPRIMER SI PROBLEMES*/
+  position: relative;
+  top: 0px;
+  width: 100%;
+  /*========================*/
+
   display: flex;
   text-align: left;
   align-items:flex-start;
@@ -25,6 +32,80 @@ header img{
 
 
 
+.in{
+
+  background-color: #1c87c9;
+
+
+  padding: 15px 34px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+
+  color : white;
+  border-color: #6E4F36;
+  border-radius: 8px;
+  background-color: #3e0d61;
+
+  width: 250px;
+  height: 55px;
+
+}
+
+.up{
+  background-color: #1c87c9;
+  color: white;
+  padding: 15px 34px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+
+  color : black;
+  border-color: #6E4F36;
+  border-radius: 8px;
+  background-color: #c8ad7f;
+
+  width: 250px;
+  height: 55px;
+
+}
+
+
+
+button.espacePerso{
+  position: absolute;
+  top : 0px;
+  right: 0px;
+  height: 30px;
+  color : rgb(227,248,243);
+  border-color: gray;
+  border-radius: 8px;
+  background-color: rgb(30,115,190);
+  margin: 10px 20px 0px 0px;
+  padding: 5px;
+  width: 100px;
+  height: 55px;
+
+  font-size: 16px;
+  cursor: pointer;
+
+}
+
+
+button.espacePerso:hover{
+  background-color: black;
+  color: rgb(227,248,243);
+  border-color: rgb(227,248,243);
+}
+
 button.login{
   position: absolute;
   top : 0px;
@@ -48,6 +129,13 @@ button.login:hover{
   background-color: black;
   color: rgb(227,248,243);
   border-color: rgb(227,248,243);
+}
+
+.sign{
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 
@@ -157,12 +245,16 @@ textarea{
   display: inline-block;
   transition: all 0.3s ease 0s;
 }
+
 footer{
+  position: relative;
+  bottom: 0;
+  width: 100%;
   background-color: black;
 	display: flex;
 	justify-content: center;
 	text-align: center;
-	font-size: 0.9 em;
+	font-size: 0.9em;
 	color: black;
 	padding: 5px;
   box-shadow: -0px -7px 5px grey;
@@ -245,6 +337,15 @@ i.fa{
   color: white;
 }
 
+.fa-user {
+  padding: 0px;
+  margin: 0px;
+}
+
+.fa-user-plus {
+  padding: 0px;
+  margin: 0px;
+}
 
 .navigation {
   width: 100%;
@@ -390,5 +491,5 @@ li{
 }
 
 form{
-  margin: 0px;
+  display: inline-block;
 }

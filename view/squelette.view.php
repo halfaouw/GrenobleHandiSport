@@ -9,7 +9,13 @@ class squelette{
   function __construct($css,$connecte) {
 
     $bouton;
+    $menuInscription = '';
+    $footerInscription = '';
+
+
     if (!$connecte) {
+      $footerInscription = '<li><a href="#">S\'inscrire</a></li>';
+      $menuInscription = '<li><a href="../controler/user.ctrl.php?action=signup" aria-haspopup="true">S\'INSCRIRE</a></li>';
       $bouton = '
       <form action="../controler/user.ctrl.php">
           <button class="login"><i class="fa fa-sign-in"></i> Se connecter </button>
@@ -71,7 +77,7 @@ class squelette{
                       <li><a href="#">SKI ALPIN</a></li>
                     </ul>
                   </li>
-                  <li><a href="#" aria-haspopup="true">S\'INSCRIRE</a></li>
+                  '.$menuInscription.'
                   <li><a href="#" aria-haspopup="true">ACTUALITES</a></li>
                   <li><a href="#" aria-haspopup="true">CONTACT</a></li>
                   <li><a href="#" aria-haspopup="true">COMMENT NOUS AIDER</a></li>
@@ -101,7 +107,7 @@ class squelette{
             <li><a href="#">Accueil</a></li>
             <li><a href="#">La vie du club</a></li>
             <li><a href="#">Sports</a></li>
-            <li><a href="#">S\'inscrire</a></li>
+            '.$footerInscription.'
             <li><a href="#">Actualités</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="#">Comment nous aider</a></li>

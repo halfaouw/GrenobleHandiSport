@@ -18,6 +18,7 @@ echo "$squelette->header"; //HEAD + HEADER + BALISE BODY OUVRANTE
  <!-- ================================================ -->
 
 
+<h1>Votre espace personnel</h1>
 
 
 <a href="../controler/espace.ctrl.php?action=logout">Se déconnecter</a>

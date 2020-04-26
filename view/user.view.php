@@ -18,6 +18,9 @@ echo "$squelette->header"; //HEAD + HEADER + BALISE BODY OUVRANTE
  <!-- ================================================ -->
 
 
+
+
+
 <div class="sign">
 
  <a href="user.ctrl.php?action=signin" class="in"><i class="fa fa-sign-in"></i> Se connecter</a>
@@ -33,6 +36,13 @@ if (isset($_GET['action']) ) {
 
 
 echo '
+
+<br>
+
+<p> <b> =============== test de la connexion : azert@mail.com // mdp : azerty =============== </b> <p>
+
+<br>
+
 
 <form  action="" method="POST" enctype="multipart/form-data">
  <input type="hidden" name="action" value="submit" required="required">
@@ -78,6 +88,15 @@ if (isset($_GET['action']) ) {
   if ($_GET['action'] == 'signup') {
 
     echo '
+
+<p>Veuillez renseigner vos informations dans les champs ci-dessous et joindre les documents nécessaire, nous vous assurons la confidentialité de vos informations et la protection de vos données. Une fois ce formulaire remplis, nous vous recontacterons afin de prendre rendez-vous et finaliser l’inscription</p> <br>
+
+<br>
+
+<p> <b> =============== tel quel, la page d\'inscription crée directement un compte =============== </b> <p>
+
+<br>
+
     <form  action="" method="POST" enctype="multipart/form-data">
      <input type="hidden" name="action" value="submit" required="required">
 
