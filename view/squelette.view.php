@@ -12,7 +12,7 @@ class squelette{
     if (!$connecte) {
       $bouton = '
       <form action="../controler/user.ctrl.php">
-          <button class="login"><i class="fa fa-sign-in"></i> Login </button>
+          <button class="login"><i class="fa fa-sign-in"></i> Se connecter </button>
       </form>
       ';
     }else {
@@ -36,7 +36,7 @@ class squelette{
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-      <link rel="icon" type="image/png" href="Favicon.jpg" />
+      <link rel="icon" type="image/png" href="../view/design/Favicon.jpg" />
 
     </head>
 
