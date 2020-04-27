@@ -5,11 +5,13 @@
     public $nom;
     public $email;
     public $id;
+    public $statut;
 
-    public function __construct(string $nm, string $mail, int $id) {
-      $this->nom = $nm;
-      $this->email = $mail;
+    public function __construct(string $nom, string $email, int $id, string $statut) {
+      $this->nom = $nom;
+      $this->email = $email;
       $this->id = $id;
+      $this->statut = $statut;
     }
   }
 

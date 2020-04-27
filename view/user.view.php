@@ -8,7 +8,7 @@ if (isset($_SESSION['user'])) {
   $connecte = false;
 }
 
-$squelette = new squelette('stylesheet.css',$connecte);
+$squelette = new squelette('stylesheet.css',$connecte,'user');
 
 echo "$squelette->header"; //HEAD + HEADER + BALISE BODY OUVRANTE
 
@@ -34,35 +34,31 @@ echo "$squelette->header"; //HEAD + HEADER + BALISE BODY OUVRANTE
 if (isset($_GET['action']) ) {
   if ($_GET['action'] == 'signin') {
 
+    echo '
+    <br>
+    <p> <b> =============== test de la connexion :  admin@mail.com // mdp : azerty (admin) =============== </b> <p>
+    <p> <b> =============== test de la connexion :  adherent@mail.com // mdp : azerty (adherent) =============== </b> <p>
+    <br>
 
-echo '
+    <form  action="" method="POST" enctype="multipart/form-data">
+     <input type="hidden" name="action" value="submit" required="required">
 
-<br>
+     Votre email:<br>
+     <input name="email" type="email" value="" size="30" required="required"><br>
 
-<p> <b> =============== test de la connexion : azert@mail.com // mdp : azerty =============== </b> <p>
+     Votre mot de passe:<br>
+     <input name="password" type="password" value="" size="30" required="required"><br><br><br>
 
-<br>
+     <input type="submit" value="Submit"/>
+     </form>
 
-
-<form  action="" method="POST" enctype="multipart/form-data">
- <input type="hidden" name="action" value="submit" required="required">
-
- Votre email:<br>
- <input name="email" type="email" value="" size="30" required="required"><br>
-
- Votre mot de passe:<br>
- <input name="password" type="password" value="" size="30" required="required"><br><br><br>
-
- <input type="submit" value="Submit"/>
- </form>
-
-';
+    ';
 
     if (isset($connexionOK)) {
       if ($connexionOK) {
         echo "<p>Vous êtes connecté </p>";
       }else {
-        echo "<p>Ce compte n'existe pas, veuillez réessayer ou vous inscrire</p>";
+        echo "<p>Ce compte n'existe pas, veuillez réessayer ou faire une demande d'inscription </p>";
       }
     }
   }
@@ -105,6 +101,9 @@ if (isset($_GET['action']) ) {
 
      Votre Age:<br>
      <input name="age" type="number" value="" size="30" required="required"/><br>
+
+     Le statut <b>(disponible uniquement pour tester les differents statuts)</b> :<br>
+     <input name="statut" type="text" value="" size="30" required="required"/><br>
 
      Votre email:<br>
      <input name="email" type="email" value="" size="30" required="required"/><br>

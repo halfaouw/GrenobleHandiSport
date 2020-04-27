@@ -8,7 +8,7 @@ if (isset($_SESSION['user'])) {
   $connecte = false;
 }
 
-$squelette = new squelette('stylesheet.css',$connecte);
+$squelette = new squelette('stylesheet.css',$connecte,'espacePerso');
 
 echo "$squelette->header"; //HEAD + HEADER + BALISE BODY OUVRANTE
 
@@ -16,9 +16,6 @@ echo "$squelette->header"; //HEAD + HEADER + BALISE BODY OUVRANTE
 
  <!-- ================================================ -->
  <!-- ================================================ -->
-
-
-<h1>Votre espace personnel</h1>
 
 
 <a href="../controler/espace.ctrl.php?action=logout">Se déconnecter</a>

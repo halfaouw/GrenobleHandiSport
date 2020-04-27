@@ -16,13 +16,16 @@ $db = new MyDB();
 
 
 
-
+// =================================================================== //
+// ============================ CONNEXION ============================ //
+// =================================================================== //
 
 if (isset($_GET['action']) ) {
     if ($_GET['action'] == 'signin') {
       if (isset($_REQUEST['email'] ) && isset($_REQUEST['password'])) {
         $email=$_REQUEST['email'];
         $password=$_REQUEST['password'];
+
 
         // echo "email : $email     //     mdp:       $password";
 
@@ -43,11 +46,17 @@ if (isset($_GET['action']) ) {
         $bddMDP = $result->fetchArray();
 
         if ($bddMDP[0] == $password){
+
           $result = $db->query("SELECT nom FROM USER WHERE email ='".$debMail."@".$finMail."'".';');
           $bddNom = $result->fetchArray();
+
           $result = $db->query("SELECT id FROM USER WHERE email ='".$debMail."@".$finMail."'".';');
           $bddId = $result->fetchArray();
-          $_SESSION['user'] = new User($bddNom[0],$email,$bddId[0]);
+
+          $result = $db->query("SELECT statut FROM USER WHERE email ='".$debMail."@".$finMail."'".';');
+          $bddStatut = $result->fetchArray();
+
+          $_SESSION['user'] = new User($bddNom[0],$email,$bddId[0],$bddStatut[0]);
           //var_dump($_SESSION['user']);
           $connexionOK = true;
           header('location: ../controler/main.ctrl.php');
@@ -62,6 +71,14 @@ if (isset($_GET['action']) ) {
     }
 }
 
+// =================================================================== //
+// =================================================================== //
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// =================================================================== //
+// =========================== INSCRIPTION =========================== //
+// =================================================================== //
 
 if (isset($_GET['action']) ) {
     if ($_GET['action'] == 'signup') {
@@ -71,6 +88,8 @@ if (isset($_GET['action']) ) {
         $age=$_REQUEST['age'];
         $email=$_REQUEST['email'];
         $password=$_REQUEST['password'];
+        $statut=$_REQUEST['statut'];
+
 
         // echo "nom : $name  //  age : $age    //  email : $email     //     mdp:       $password";
 
@@ -100,8 +119,8 @@ if (isset($_GET['action']) ) {
           $idmax = $result->fetchArray();
 
           $sql =<<<EOF
-            INSERT INTO user (ID,NOM,AGE,EMAIL,MDP)
-            VALUES ($idmax[0]+1, '$name', '$age', '$email', '$password' );
+            INSERT INTO user (ID,NOM,AGE,EMAIL,MDP,STATUT)
+            VALUES ($idmax[0]+1, '$name', '$age', '$email', '$password', '$statut' );
           EOF;
           $ret = $db->exec($sql);
           if(!$ret){
@@ -116,6 +135,9 @@ if (isset($_GET['action']) ) {
        }
     }
 }
+
+// =================================================================== //
+// =================================================================== //
 
 
 

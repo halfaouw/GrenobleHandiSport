@@ -8,7 +8,7 @@ if (isset($_SESSION['user'])) {
   $connecte = false;
 }
 
-$squelette = new squelette('stylesheet.css',$connecte);
+$squelette = new squelette('stylesheet.css',$connecte,'info');
 echo "$squelette->header"; //HEAD + HEADER + BALISE BODY OUVRANTE
 
  ?>
