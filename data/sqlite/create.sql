@@ -29,10 +29,11 @@ Pouvoir modifier son MDP
 
 TESTS UNITAIRES :
 
-connexion marche bien
-deconnexion marche bien
-Une fois connecter, on n'a plus acces à la page d'inscription ni à celle de connexion
-
+Connexion/Déconnexion marche bien.
+Enregistrement dans la base de donnée d’une inscription fonctionnel.
+Une fois connecté, on n'a plus accès à la page d'inscription ni à celle de connexion.
+Navbar spéciale sur la page de l’espace personnel et est différente en fonction du statut de l’utilisateur.
+Impossible de créer plusieurs comptes avec le même mail, même en rafraichissant la page.
 
 
 
