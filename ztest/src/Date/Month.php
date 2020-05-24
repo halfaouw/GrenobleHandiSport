@@ -42,10 +42,8 @@ class Month {
     $start = $this->getStartingDay();
     $end = (clone $start)->modify('+1 month -1 day');
 
-    echo"end".intval($end->format('W'))."////// start".intval($start->format('W'))."\n";
 
     $weeks = intval($end->format('W')) - intval($start->format('W')) +1;
-    echo " Nombre de semaine1 = $weeks";
 
 /*
     if ($weeks < 0){
@@ -58,24 +56,21 @@ class Month {
 */
 
     if ($weeks < 0){
-      echo "Blabla 1--";
       $weeks = intval($end->format('W'))+1;
     }
-    /*
-    if ($this->month == 12) {
-      echo "Blabla 2--";
+
+
+    if ($this->month == 12 && intval($end->format('W')) == 1) {
       $end = (clone $start)->modify('+4 week');
       $weeks = intval($end->format('W')) - intval($start->format('W')) +2;
     }
-    */
 
+
+/*
     if ($start->format('w') == 1) {
-      echo " Nombre de semaine = $weeks";
-
       $weeks +=1;
     }
-
-    echo " Nombre de semaine = $weeks";
+*/
     return $weeks;
   }
 
